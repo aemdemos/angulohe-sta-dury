@@ -1,7 +1,11 @@
 {
-  "originUrl": "https://www.durystasavingsprogram.com",
-  "lastCrawled": "https://www.durystasavingsprogram.com/",
-  "urls": [],
+  "originUrl": "https://www.durystasavingsprogram.com/",
+  "urls": [
+    {
+      "url": "https://www.durystasavingsprogram.com/",
+      "source": "CRAWL"
+    }
+  ],
   "crawlOptions": {
     "timeout": 64800000,
     "inclusionPatterns": [],
@@ -9,13 +13,8 @@
     "limit": -1,
     "sameDomain": true,
     "keepHash": false,
-    "strategy": "SITEMAPS",
+    "strategy": "crawl",
     "logger": {}
   },
-  "extractionErrors": [
-    {
-      "url": "https://www.durystasavingsprogram.com/sitemap.xml",
-      "status": "parseSitemapFromUrl (https://www.durystasavingsprogram.com/sitemap.xml): Failed to fetch or parse the sitemap. Failed to fetch the sitemap. Status: 404"
-    }
-  ]
+  "extractionErrors": []
 }
