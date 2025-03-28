@@ -13,8 +13,7 @@
   background-color: #007a3c; /* Apply green background */
   padding: 40px; /* Add spacing inside the text section */
   display: flex; /* Use flex for internal layout */
-  flex-direction: row; /* Position text elements horizontally if needed */
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  flex-flow: row wrap; /* Position text elements horizontally if needed */ /* Allow wrapping for responsiveness */
   justify-content: flex-start; /* Align text horizontally to the left */
   align-items: center; /* Align text vertically in the center */
   color: #fff; /* Ensure white text for contrast */
