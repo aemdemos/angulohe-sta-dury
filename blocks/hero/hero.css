@@ -1,52 +1,70 @@
 
+.hero-container > .hero-wrapper {
+  max-width: unset; /* Allow hero to span the entire width */
+  padding: 0; /* Remove spacing around the block */
+}
+
 .hero-wrapper > .hero {
   display: flex; /* Create a flex container for side-by-side layout */
   flex-direction: row; /* Ensure elements are side by side */
-  align-items: stretch; /* Stretch elements to fill the container */
+  align-items: stretch; /* Stretch both sections to fill container height */
   justify-content: space-between; /* Space out columns evenly */
-  padding: 0; /* Remove extra padding */
   min-height: 300px; /* Maintain consistent height */
 }
 
 .hero-wrapper > .hero > div:first-child {
-  flex: 2; /* Make the left column wider */
+  flex: 3; /* Text section occupies 60% of the width */
   background-color: #007a3c; /* Apply green background */
   padding: 40px; /* Add padding for spacing */
   display: flex; /* Create a flex container */
-  flex-direction: column; /* Stack text vertically */
-  justify-content: flex-start; /* Align text to the top */
-  align-items: flex-start; /* Align text content to the left */
+  flex-direction: row; /* Ensure nested content aligns side by side */
+  flex-wrap: wrap; /* Allow wrapping for text elements */
+  justify-content: flex-start; /* Align text content horizontally to the left */
+  align-items: center; /* Center text content vertically */
   color: #fff; /* Ensure white text for contrast */
 }
 
-.hero-wrapper > .hero > div:first-child h1,
+.hero-wrapper > .hero > div:first-child > div {
+  display: flex; /* Ensure nested rows align side by side */
+  flex-direction: row; /* Stack child elements side by side */
+  flex-wrap: wrap; /* Allow wrapping within each row */
+  width: 100%; /* Ensure each row spans full width */
+  align-items: center; /* Center items vertically */
+}
+
+.hero-wrapper > .hero > div:first-child h1 {
+  margin: 0; /* Remove default margins */
+  margin-bottom: 24px; /* Add spacing below the heading */
+  line-height: 1.4; /* Adjust line height for readability */
+  width: 100%; /* Ensure text stays within its container */
+  text-align: left; /* Align text content to the left */
+}
+
 .hero-wrapper > .hero > div:first-child h2 {
-  margin: 0; /* Remove margins */
-  margin-bottom: 16px; /* Add consistent spacing between text elements */
-  color: #fff; /* Ensure text remains white */
-  line-height: 1.4; /* Adjust line height for tighter spacing */
+  margin: 0; /* Remove default margins */
+  margin-bottom: 16px; /* Add spacing below the second line */
+  line-height: 1.4; /* Adjust line height for readability */
+  width: 100%; /* Ensure text stays within its container */
+  text-align: left; /* Align text content to the left */
 }
 
 .hero-wrapper > .hero > div:last-child {
-  flex: 1; /* Make the right column narrower */
-  display: flex; /* Ensure the image fills its column */
+  flex: 2; /* Image section occupies 40% of the width */
+  display: flex; /* Create a flex container */
   align-items: center; /* Center the image vertically */
-  justify-content: center; /* Center the image horizontally */
+  justify-content: flex-end; /* Align the image to the right */
   padding: 0; /* Remove padding */
+  order: 2; /* Ensure this section appears on the right */
 }
 
 .hero-wrapper > .hero > div:last-child picture {
   width: 100%; /* Ensure the picture fills the column */
-  height: auto; /* Maintain aspect ratio */
+  height: 100%; /* Match the height of the column */
+  object-fit: cover; /* Scale image without distortion */
 }
 
 .hero-wrapper > .hero > div:last-child img {
-  object-fit: cover; /* Prevent image distortion */
+  object-fit: cover; /* Prevent image stretching */
   width: 100%; /* Fill the width of the column */
   height: auto; /* Maintain aspect ratio */
-}
-
-.hero-container > .hero-wrapper {
-  max-width: unset; /* Allow hero to span the entire width */
-  padding: 0; /* Remove spacing around the block */
 }
