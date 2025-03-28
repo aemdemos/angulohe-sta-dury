@@ -13,8 +13,7 @@
   background-color: #007a3c; /* Green background for text */
   padding: 60px 40px; /* Adjust padding for better spacing */
   display: flex; /* Create a flex container */
-  flex-direction: row; /* Ensure nested elements are side by side */
-  flex-wrap: wrap; /* Allow wrapping for text elements */
+  flex-flow: row wrap; /* Ensure nested elements are side by side */ /* Allow wrapping for text elements */
   justify-content: flex-start; /* Align text to the top-left */
   align-items: flex-start; /* Align text content to the top */
   color: white; /* Ensure white text for contrast */
