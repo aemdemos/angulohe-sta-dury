@@ -2,59 +2,60 @@
 .hero-wrapper > .hero {
   display: flex; /* Ensure side-by-side layout */
   flex-direction: row; /* Align sections horizontally */
-  justify-content: space-between; /* Separate text and image evenly */
-  align-items: stretch; /* Match heights of both sections */
-  padding: 0; /* Remove padding */
-  min-height: 600px; /* Ensure sufficient height for the hero block */
+  justify-content: space-between; /* Space sections evenly */
+  align-items: stretch; /* Match the height of both sections */
+  height: auto; /* Dynamically adjust height based on content */
 }
 
 .hero-wrapper > .hero > div:first-child {
-  flex: 0 0 60%; /* Maintain width at 60% for the text section */
-  background-color: #007C68; /* Apply darker green background */
-  color: #FFFFFF; /* White text for readability */
-  display: flex; /* Use flex layout */
+  flex: 0 0 50%; /* Text section occupies half the width */
+  background-color: #0B856F; /* Bright green background */
+  color: white; /* Ensure text readability */
+  display: flex; /* Enable flexbox layout */
   flex-direction: column; /* Stack text elements vertically */
-  justify-content: center; /* Center text vertically within the section */
-  align-items: flex-start; /* Align text to the left */
-  padding: 40px; /* Add consistent spacing inside the section */
+  justify-content: flex-start; /* Align text at the top */
+  align-items: flex-start; /* Align text horizontally to the left */
+  padding: 40px; /* Add padding inside the text section */
 }
 
 .hero-wrapper > .hero > div:first-child h1 {
-  font-size: 3rem; /* Increase font size for heading */
-  font-weight: 700; /* Ensure bold font */
-  color: #FFB600; /* Apply yellow color for emphasis */
-  margin-bottom: 40px; /* Increase spacing below heading */
-  line-height: 1.5; /* Adjust line height for readability */
+  font-size: 2.5rem; /* Adjust heading size */
+  font-weight: bold; /* Make heading stand out */
+  color: #FFC41D; /* Yellow color for emphasis */
+  margin-bottom: 24px; /* Increase spacing below heading */
+  line-height: 1.6; /* Improve readability */
 }
 
 .hero-wrapper > .hero > div:first-child p {
-  font-size: 1rem; /* Standard paragraph font size */
-  margin-bottom: 24px; /* Increase spacing between paragraphs */
+  font-size: 1.125rem; /* Adjust paragraph size */
+  margin-bottom: 16px; /* Add spacing between paragraphs */
   line-height: 1.6; /* Enhance readability */
-  color: #FFFFFF; /* Ensure text remains white */
 }
 
 .hero-wrapper > .hero > div:first-child hr {
-  display: none; /* Remove horizontal line */
+  display: block; /* Ensure horizontal divider is visible */
+  border: none; /* Remove default border styling */
+  border-top: 1px solid white; /* Add a subtle white line */
+  margin: 20px 0; /* Add spacing above and below */
+  width: 100%; /* Ensure the divider spans the text section width */
 }
 
 .hero-wrapper > .hero > div:last-child {
-  flex: 0 0 40%; /* Maintain width at 40% for the image section */
-  background-image: url('./media_1354fe140e8d96373d952968382a67ca8e79f7176.png'); /* Use the image as background */
-  background-size: cover; /* Ensure the image fills the section */
-  background-position: center; /* Center the image */
-  height: auto; /* Ensure the image section adjusts height dynamically */
-  display: flex; /* Use flex layout */
-  justify-content: center; /* Center any nested content horizontally */
-  align-items: center; /* Center any nested content vertically */
+  flex: 0 0 50%; /* Image section occupies half the width */
+  order: 2; /* Position the image on the right side */
+  display: block; /* Use standalone block layout */
+  padding: 0; /* Remove any padding */
 }
 
 .hero-wrapper > .hero > div:last-child picture,
 .hero-wrapper > .hero > div:last-child img {
-  display: none; /* Hide standalone image elements */
+  display: block; /* Ensure the image is visible */
+  width: 100%; /* Fill the width of the section */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Prevent image stretching */
 }
 
 .hero-container > .hero-wrapper {
-  max-width: unset; /* Allow the hero block to span the full width of the page */
+  max-width: unset; /* Allow the hero block to fill the page width */
   padding: 0; /* Remove outer padding */
 }
