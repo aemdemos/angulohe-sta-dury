@@ -1,52 +1,61 @@
 
 .hero-wrapper > .hero {
-  display: flex; /* Create a flex container for side-by-side layout */
-  flex-direction: row; /* Ensure elements are side by side */
-  align-items: stretch; /* Stretch elements to fill the container */
-  justify-content: space-between; /* Space out columns evenly */
-  padding: 0; /* Remove extra padding */
-  min-height: 300px; /* Maintain consistent height */
+  display: flex; /* Ensure side-by-side layout */
+  flex-direction: row; /* Align sections horizontally */
+  justify-content: space-between; /* Space sections evenly */
+  align-items: stretch; /* Match the height of both sections */
+  height: auto; /* Dynamically adjust height based on content */
 }
 
 .hero-wrapper > .hero > div:first-child {
-  flex: 2; /* Make the left column wider */
-  background-color: #007a3c; /* Apply green background */
-  padding: 40px; /* Add padding for spacing */
-  display: flex; /* Create a flex container */
-  flex-direction: column; /* Stack text vertically */
-  justify-content: flex-start; /* Align text to the top */
-  align-items: flex-start; /* Align text content to the left */
-  color: #fff; /* Ensure white text for contrast */
+  flex: 0 0 50%; /* Text section occupies half the width */
+  background-color: #0B856F; /* Bright green background */
+  color: white; /* Ensure text readability */
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Stack text elements vertically */
+  justify-content: flex-start; /* Align text at the top */
+  align-items: flex-start; /* Align text horizontally to the left */
+  padding: 40px; /* Add padding inside the text section */
 }
 
-.hero-wrapper > .hero > div:first-child h1,
-.hero-wrapper > .hero > div:first-child h2 {
-  margin: 0; /* Remove margins */
-  margin-bottom: 16px; /* Add consistent spacing between text elements */
-  color: #fff; /* Ensure text remains white */
-  line-height: 1.4; /* Adjust line height for tighter spacing */
+.hero-wrapper > .hero > div:first-child h1 {
+  font-size: 2.5rem; /* Adjust heading size */
+  font-weight: bold; /* Make heading stand out */
+  color: #FFC41D; /* Yellow color for emphasis */
+  margin-bottom: 24px; /* Increase spacing below heading */
+  line-height: 1.6; /* Improve readability */
+}
+
+.hero-wrapper > .hero > div:first-child p {
+  font-size: 1.125rem; /* Adjust paragraph size */
+  margin-bottom: 16px; /* Add spacing between paragraphs */
+  line-height: 1.6; /* Enhance readability */
+}
+
+.hero-wrapper > .hero > div:first-child hr {
+  display: block; /* Ensure horizontal divider is visible */
+  border: none; /* Remove default border styling */
+  border-top: 1px solid white; /* Add a subtle white line */
+  margin: 20px 0; /* Add spacing above and below */
+  width: 100%; /* Ensure the divider spans the text section width */
 }
 
 .hero-wrapper > .hero > div:last-child {
-  flex: 1; /* Make the right column narrower */
-  display: flex; /* Ensure the image fills its column */
-  align-items: center; /* Center the image vertically */
-  justify-content: center; /* Center the image horizontally */
-  padding: 0; /* Remove padding */
+  flex: 0 0 50%; /* Image section occupies half the width */
+  order: 2; /* Position the image on the right side */
+  display: block; /* Use standalone block layout */
+  padding: 0; /* Remove any padding */
 }
 
-.hero-wrapper > .hero > div:last-child picture {
-  width: 100%; /* Ensure the picture fills the column */
-  height: auto; /* Maintain aspect ratio */
-}
-
+.hero-wrapper > .hero > div:last-child picture,
 .hero-wrapper > .hero > div:last-child img {
-  object-fit: cover; /* Prevent image distortion */
-  width: 100%; /* Fill the width of the column */
+  display: block; /* Ensure the image is visible */
+  width: 100%; /* Fill the width of the section */
   height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Prevent image stretching */
 }
 
 .hero-container > .hero-wrapper {
-  max-width: unset; /* Allow hero to span the entire width */
-  padding: 0; /* Remove spacing around the block */
+  max-width: unset; /* Allow the hero block to fill the page width */
+  padding: 0; /* Remove outer padding */
 }
