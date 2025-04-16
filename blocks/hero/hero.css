@@ -2,51 +2,49 @@
 .hero-wrapper > .hero {
   display: flex; /* Ensure side-by-side layout */
   flex-direction: row; /* Align sections horizontally */
-  justify-content: space-between; /* Space the text and image evenly */
-  align-items: stretch; /* Stretch both sections to match height */
-  padding: 0; /* Remove default padding */
-  min-height: 500px; /* Ensure consistent height */
+  justify-content: space-between; /* Separate text and image evenly */
+  align-items: stretch; /* Match heights of both sections */
+  padding: 0; /* Remove padding */
+  min-height: 600px; /* Ensure sufficient height for the hero block */
 }
 
 .hero-wrapper > .hero > div:first-child {
-  flex: 0 0 50%; /* Set width to 50% for the text section */
-  background-color: #009C66; /* Apply the green background color */
+  flex: 0 0 60%; /* Maintain width at 60% for the text section */
+  background-color: #007C68; /* Apply darker green background */
   color: #FFFFFF; /* White text for readability */
   display: flex; /* Use flex layout */
-  flex-direction: column; /* Stack elements vertically inside the text section */
-  justify-content: center; /* Center content vertically */
-  align-items: flex-start; /* Align text content to the left */
-  padding: 40px; /* Add spacing around the text */
+  flex-direction: column; /* Stack text elements vertically */
+  justify-content: center; /* Center text vertically within the section */
+  align-items: flex-start; /* Align text to the left */
+  padding: 40px; /* Add consistent spacing inside the section */
 }
 
 .hero-wrapper > .hero > div:first-child h1 {
-  font-size: 2.5rem; /* Set font size for the main heading */
-  font-weight: 700; /* Use bold font */
-  color: #FFB600; /* Yellow text for emphasis */
-  margin-bottom: 16px; /* Add consistent spacing below */
-  line-height: 1.5; /* Improve readability */
+  font-size: 3rem; /* Increase font size for heading */
+  font-weight: 700; /* Ensure bold font */
+  color: #FFB600; /* Apply yellow color for emphasis */
+  margin-bottom: 40px; /* Increase spacing below heading */
+  line-height: 1.5; /* Adjust line height for readability */
 }
 
 .hero-wrapper > .hero > div:first-child p {
   font-size: 1rem; /* Standard paragraph font size */
-  margin-bottom: 16px; /* Add consistent spacing between elements */
-  line-height: 1.5; /* Improve text readability */
-  color: #FFFFFF; /* Ensure text is white */
+  margin-bottom: 24px; /* Increase spacing between paragraphs */
+  line-height: 1.6; /* Enhance readability */
+  color: #FFFFFF; /* Ensure text remains white */
 }
 
 .hero-wrapper > .hero > div:first-child hr {
-  border: none; /* Remove default border styling */
-  border-top: 1px solid #FFFFFF; /* Add a thin white line as separator */
-  margin: 16px 0; /* Add spacing above and below the line */
+  display: none; /* Remove horizontal line */
 }
 
 .hero-wrapper > .hero > div:last-child {
-  flex: 0 0 50%; /* Set width to 50% for the image section */
-  background-image: url('./media_1354fe140e8d96373d952968382a67ca8e79f7176.png'); /* Use the image as a background */
-  background-size: cover; /* Ensure the image spans the section */
-  background-position: center; /* Center the image within the section */
-  height: auto; /* Adjust height dynamically */
-  display: flex; /* Ensure alignment */
+  flex: 0 0 40%; /* Maintain width at 40% for the image section */
+  background-image: url('./media_1354fe140e8d96373d952968382a67ca8e79f7176.png'); /* Use the image as background */
+  background-size: cover; /* Ensure the image fills the section */
+  background-position: center; /* Center the image */
+  height: auto; /* Ensure the image section adjusts height dynamically */
+  display: flex; /* Use flex layout */
   justify-content: center; /* Center any nested content horizontally */
   align-items: center; /* Center any nested content vertically */
 }
@@ -58,22 +56,5 @@
 
 .hero-container > .hero-wrapper {
   max-width: unset; /* Allow the hero block to span the full width of the page */
-  padding: 0; /* Remove padding around the container */
-}
-
-@media (max-width: 768px) {
-  .hero-wrapper > .hero {
-    flex-direction: column; /* Stack sections vertically for smaller screens */
-    align-items: center; /* Center content horizontally */
-  }
-
-  .hero-wrapper > .hero > div {
-    flex: none; /* Remove width constraints */
-    width: 100%; /* Make each section span the full width */
-  }
-
-  .hero-wrapper > .hero > div:last-child {
-    background-size: contain; /* Adjust image size for smaller screens */
-    height: 300px; /* Restrict height for better visibility */
-  }
+  padding: 0; /* Remove outer padding */
 }
